@@ -11,6 +11,8 @@ namespace DataStructures.Arrays;
 // 2. The array is not sorted
 public static class TwoSum
 {
+    // Using Dictionary
+    // Time complexity: Linear time O(n)
     public static (int, int) FirstWay(int[] numbers, int target)
     {
         var complAndIndex = new Dictionary<int, int>();
