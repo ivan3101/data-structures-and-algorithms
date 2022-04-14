@@ -1,11 +1,9 @@
 ﻿
 using DataStructures.Arrays;
 
-var arrOne = new int[] {0, 3, 4, 31, 105};
-var arrTwo = new int[] {4, 30, 50, 99, 101};
+var numbers = new int[] { 1,1,1,1,1,4,1,1,1,1,1,7,1,1,1,1,1 };
+const int target = 11;
 
-var mergedArray = MergeSortedArrays.FirstWay(arrOne, arrTwo);
+var result = TwoSum.FirstWay(numbers, target);
 
-foreach (var n in mergedArray) {
-    Console.WriteLine(n);
-}
+Console.WriteLine($"[{result.Item1}, {result.Item2}]");
