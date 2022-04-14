@@ -32,4 +32,26 @@ public static class TwoSum
 
         return result;
     }
+    
+    // Using brute force
+    // Time complexity: Quadratic time O(n^2)
+    public static (int, int) SecondWay(int[] numbers, int target)
+    {
+        var result = (0, 0); 
+
+        for (var i = 0; i < numbers.Length; i++)
+        {
+            for (var j = i + 1; j < numbers.Length; j++)
+            {
+                var sum = numbers[i] + numbers[j];
+
+                if (sum == target)
+                {
+                    result = (i, j);
+                }
+            }
+        }
+
+        return result;
+    }
 }
