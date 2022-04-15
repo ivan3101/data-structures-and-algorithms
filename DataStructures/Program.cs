@@ -1,9 +1,21 @@
 ﻿
-using DataStructures.Arrays;
+using System.Diagnostics;
+using DataStructures.Recursion;
 
-var numbers = new int[] { 1,1,1,1,1,4,1,1,1,1,1,7,1,1,1,1,1 };
-const int target = 11;
+var watch = new Stopwatch();
+watch.Start();
+Console.WriteLine(Fibonacci.FirstWay(50));
+watch.Stop();
+Console.WriteLine($"{watch.ElapsedMilliseconds} ms");
 
-var result = TwoSum.SecondWay(numbers, target);
+watch.Reset();
+watch.Start();
+Console.WriteLine(Fibonacci.SecondWay(50));
+watch.Stop();
+Console.WriteLine($"{watch.ElapsedMilliseconds} ms");
 
-Console.WriteLine($"[{result.Item1}, {result.Item2}]");
+watch.Reset();
+watch.Start();
+Console.WriteLine(Fibonacci.ThirdWay(50));
+watch.Stop();
+Console.WriteLine($"{watch.ElapsedMilliseconds} ms");
